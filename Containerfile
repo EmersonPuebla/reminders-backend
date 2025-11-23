@@ -12,7 +12,7 @@ COPY --chown=gradle:gradle . .
 RUN gradle bootJar -x test --no-daemon
 
 # Runtime stage: minimal JRE image
-FROM eclipse-temurin:21-jre
+FROM docker.io/eclipse-temurin:21-jre
 
 # Application jar copied from builder
 COPY --from=builder /home/gradle/project/build/libs/*.jar /app/app.jar
