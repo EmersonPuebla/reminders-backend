@@ -1,7 +1,8 @@
 # Multi-stage Containerfile for building and running the Spring Boot Kotlin app with Podman
 
 # Builder stage: use official Gradle image with JDK 21 to compile the project
-FROM gradle:9.2.1-jdk21 AS builder
+# Original: FROM gradle:9.2.1-jdk21 AS builder
+FROM docker.io/library/gradle:9.2.1-jdk21 AS builder
 WORKDIR /home/gradle/project
 
 # Copy project files and keep ownership for the gradle user
