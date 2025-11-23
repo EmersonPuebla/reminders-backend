@@ -1,0 +1,15 @@
+/.gradle
+/build
+/.idea
+/.vscode
+/.git
+**/build
+**/.classpath
+**/.project
+**/.settings
+**/.factorypath
+gradle-wrapper.jar
+gradlew.bat
+*.log
+node_modules
+/.DS_Store
